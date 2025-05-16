@@ -28,6 +28,7 @@ public class UserController {
     private final UserService userService;
     private final HttpSession session;
 
+    // swagger 코드 추가 단점 : 가독성이 떨어짐
     @Operation(summary = "회원정보 수정", description = "로그인한 사용자의 비밀번호와 이메일을 수정합니다.")
     @ApiResponse(responseCode = "200", description = "회원정보 수정 성공",
             content = @Content(schema = @Schema(implementation = UserResponse.DTO.class)))
