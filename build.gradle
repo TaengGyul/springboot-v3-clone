@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'org.springframework.boot' version '3.2.2'
     id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+    // 1. 문서만들기
     id 'org.asciidoctor.jvm.convert' version '3.3.2'
 }
 
@@ -23,6 +24,7 @@ repositories {
 }
 
 dependencies {
+    // 2. 문서만들기
     testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
     implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.12.0'
     implementation 'org.springframework.boot:spring-boot-starter-aop'

@@ -20,7 +20,6 @@ import shop.mtcoding.blog.user.UserRequest;
 
 import static org.hamcrest.Matchers.matchesPattern;
 
-// 5. (컨트롤러 가기) 문서 만들기 (상속하고, mvc 부모 옮기고, 부모에 갔으니 삭제하고, andDO 설정하고)
 @Transactional
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK) // MOCK -> 가짜 환경을 만들어 필요한 의존관계를 다 메모리에 올려서 테스트
 public class UserControllerTest extends MyRestDoc {
