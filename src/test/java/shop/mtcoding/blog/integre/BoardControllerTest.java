@@ -1,7 +1,6 @@
 package shop.mtcoding.blog.integre;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -13,6 +12,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
+import org.springframework.transaction.annotation.Transactional;
 import shop.mtcoding.blog._core.util.JwtUtil;
 import shop.mtcoding.blog.board.BoardRequest;
 import shop.mtcoding.blog.user.User;
@@ -48,15 +48,6 @@ public class BoardControllerTest {
         // 테스트 후 정리할 코드
         System.out.println("tearDown");
     }
-
-    @Test
-    public void good_test() throws Exception {
-        ResultActions actions = mvc.perform(
-                MockMvcRequestBuilders
-                        .get("/")
-        );
-    }
-
 
     @Test
     public void list_test() throws Exception {
